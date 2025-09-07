@@ -1,0 +1,16 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: default-ip-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.15.240-192.168.15.250   # Ajuste para um intervalo livre na sua rede local
+
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: default
+  namespace: metallb-system
+spec: {}
