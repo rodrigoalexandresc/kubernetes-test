@@ -4,7 +4,7 @@ metadata:
   name: nginx-lb
 spec:
   selector:
-    app: nginx-test
+    app: nginx
   type: LoadBalancer
   ports:
     - port: 80
