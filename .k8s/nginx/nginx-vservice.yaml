@@ -4,7 +4,7 @@ metadata:
   name: nginx-vs
 spec:
   gateways:
-    - nginx-gateway
+    - rsc-istio-gateway
   hosts:
     - "website.rs-ceschi.com.br"
   http:
