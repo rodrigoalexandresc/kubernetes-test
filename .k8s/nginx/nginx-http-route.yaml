@@ -1,18 +1,14 @@
-apiVersion: gateway.networking.k8s.io/v1beta1
-kind: HTTPRoute
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
 metadata:
-  name: nginx-route
-  namespace: default
+  name: nginx-gateway
 spec:
-  parentRefs:
-    - name: nginx-gateway
-  hostnames:
-    - "website.meuapp.com"
-  rules:
-    - matches:
-        - path:
-            type: Prefix
-            value: "/"
-      forwardTo:
-        - serviceName: nginx-service
-          port: 80
+  selector:
+    istio: ingressgateway # usa o pod IngressGateway padrão do Istio
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "website.rs-ceschi.com.br"
