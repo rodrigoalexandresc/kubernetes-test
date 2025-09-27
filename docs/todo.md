@@ -30,6 +30,21 @@ Rancher
 
 Usar OAuth para autenticação
 
+## Passo a passo
+
+TI:
+- Provisionamento de VM's
+- Atribuição de nome para os nós DNS: k8s-01.corporacao.corp
+
+TI/Arq:
+- Gerar CA intermediária para provisionamento de certificados
+
+Engenheria
+
+1. Criação de usuário para cluster
+2. 
+
+
 ## Importante
 
 ## SSH
