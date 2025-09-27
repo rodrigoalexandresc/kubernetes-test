@@ -1,12 +1,12 @@
-apiVersion: networking.istio.io/v1beta1
+apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
   name: nginx-vs
 spec:
-  hosts:
-    - "website.rs-ceschi.com.br"
   gateways:
     - nginx-gateway
+  hosts:
+    - "website.rs-ceschi.com.br"
   http:
     - match:
         - uri:

@@ -28,3 +28,9 @@ Instalação Antrea
 kubectl apply -f https://github.com/antrea-io/antrea/releases/download/v2.2.2/antrea.yml
 sudo mkdir -p /usr/lib/cni
 sudo ln -s /opt/cni/bin/* /usr/lib/cni/
+
+
+# Istio - funcionamento
+
+O Istio possui um ingress dele, que repassa as conexões para um Gateway criado com o nameserver com wildcard (dominio)
+O Gateway do dominio passa para o virtual service, que passa para o service ClusterIp

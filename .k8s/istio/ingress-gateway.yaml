@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: rsc-istio-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway # usa o pod IngressGateway padrão do Istio
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*.rs-ceschi.com.br"
