@@ -184,5 +184,6 @@ https://istio.io/latest/docs/setup/install/helm/
 
 ## Dúvidas
 
+- Como rotacionar certificados (e renovar) ?
 - Como fazer o backup do etcd ?
 - Como garantir HA
