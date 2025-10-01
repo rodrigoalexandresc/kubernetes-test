@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: istio-gateway-cert
+  namespace: istio-system
+spec:
+  secretName: istio-gateway-tls
+  commonName: "app.cluster.local"
+  dnsNames:
+    - "app.cluster.local"
+  issuerRef:
+    name: internal-ca-issuer
+    kind: ClusterIssuer
